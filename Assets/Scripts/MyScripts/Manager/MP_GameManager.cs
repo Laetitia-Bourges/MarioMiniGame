@@ -44,6 +44,8 @@ public class MP_GameManager : MP_Singleton<MP_GameManager>
             StartCoroutine(InstantiateObstacle());
         };
         isStartGame = true;
+        minTimer = 1;
+        maxTimer = 2;
     }
     #region Timer
     void SetNewTimer()
@@ -51,6 +53,8 @@ public class MP_GameManager : MP_Singleton<MP_GameManager>
         nbPlayerAlive = players.Count;
         currentNbObstacles = Random.Range(minObstacles, maxObstacles);
         maxCurrentTimer = Random.Range(minTimer, maxTimer);
+        minTimer = minTimer <= .5f ? .5f : minTimer - .01f;
+        maxTimer = maxTimer <= 1 ? 1 : maxTimer - .03f;
         timer = 0;
     }
     void UpdateTimer()
@@ -75,7 +79,7 @@ public class MP_GameManager : MP_Singleton<MP_GameManager>
     string GetWinnerPlayer()
     {
         for (int i = 0; i < players.Count; i++)
-            if (players[i].IsAlive) return players[i].Name;
+            if (players[i].Settings.IsAlive) return players[i].Name;
         return "";
     }
     #endregion

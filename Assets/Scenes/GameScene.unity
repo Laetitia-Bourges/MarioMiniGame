@@ -461,9 +461,9 @@ MonoBehaviour:
   obstacleObject: {fileID: 8485317644148161261, guid: 05a2400b77c69cc4ca0f1662c13d1707,
     type: 3}
   minTimer: 1
-  maxTimer: 2.5
+  maxTimer: 2
   minObstacles: 1
-  maxObstacles: 7
+  maxObstacles: 5
   players:
   - {fileID: 986311940}
   - {fileID: 1347994510}
@@ -4544,9 +4544,10 @@ MonoBehaviour:
   jumpButton: 273
   heightJump: 5
   speedJump: 10
-  manaJumpMax: 30
+  manaJumpMax: 40
   playerLife: {fileID: 99509585}
-  animator: {fileID: 0}
+  animator: {fileID: 986311938}
+  fxHit: {fileID: 0}
 --- !u!54 &986311941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6335,9 +6336,10 @@ MonoBehaviour:
   jumpButton: 32
   heightJump: 5
   speedJump: 10
-  manaJumpMax: 30
+  manaJumpMax: 40
   playerLife: {fileID: 1709691396}
-  animator: {fileID: 0}
+  animator: {fileID: 1347994509}
+  fxHit: {fileID: 0}
 --- !u!136 &1347994511
 CapsuleCollider:
   m_ObjectHideFlags: 0
