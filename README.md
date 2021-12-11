@@ -14,3 +14,4 @@ The two player have to jump above some wood logs. if they hit the logs, they wil
 </p>
 
 All assets are free asset from the Unity store or free of rights assets download on Internet.
+The main scene is Assets/Scene/GameScene
